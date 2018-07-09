@@ -1,24 +1,25 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 import { createStackNavigator, DrawerNavigator } from 'react-navigation'
-import { createBottomTabNavigator } from 'react-navigation'; 
+import { createBottomTabNavigator } from 'react-navigation';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeScreen from '../components/HomeScreen'
 import TestScreen from '../components/TestScreen'
 
-const MainStack = createStackNavigator({
+// const MainStack = createStackNavigator({
+//     Home: HomeScreen,
+//     Test: TestScreen,
+//   },
+//   {
+//     initialRouteName: 'Home'
+//   }
+// );
+
+const MainStack = createBottomTabNavigator(
+  {
     Home: HomeScreen,
     Test: TestScreen,
-  },
-  {
-    initialRouteName: 'Home'
-  }
-);
-
-export default createBottomTabNavigator(
-  {
-    Home: HomeScreen,
-    Settings: SettingsScreen,
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -26,18 +27,18 @@ export default createBottomTabNavigator(
         const { routeName } = navigation.state;
         let iconName;
         if (routeName === 'Home') {
-          iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Settings') {
-          iconName = `ios-options${focused ? '' : '-outline'}`;
+          iconName = `ios-home${focused ? '' : '-outline'}`;
+        } else if (routeName === 'Test') {
+          iconName = `ios-contact${focused ? '' : '-outline'}`;
         }
 
         // You can return any component that you like here! We usually use an
         // icon component from react-native-vector-icons
-        return <Ionicons name={iconName} size={25} color={tintColor} />;
+        return <Ionicons name={iconName} size={35} color={tintColor} />;
       },
     }),
     tabBarOptions: {
-      activeTintColor: 'tomato',
+      activeTintColor: 'purple',
       inactiveTintColor: 'gray',
     },
   }
