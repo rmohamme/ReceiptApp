@@ -11,7 +11,6 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 
-import HomeScreen from './app/components/HomeScreen'
 import AppNavigator from './app/Navigation/AppNavigator.js'
 
 // const instructions = Platform.select({
