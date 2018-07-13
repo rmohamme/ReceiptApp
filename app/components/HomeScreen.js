@@ -4,7 +4,6 @@ import {
   Text
 } from 'react-native';
 import { Button } from 'react-native-elements'
-import { RNCamera } from 'react-native-camera';
 
 export default class HomeScreen extends React.Component {
   render() {

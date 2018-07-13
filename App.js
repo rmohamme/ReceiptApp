@@ -10,7 +10,6 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
-
 import AppNavigator from './app/Navigation/AppNavigator.js'
 
 // const instructions = Platform.select({
@@ -37,6 +36,12 @@ import AppNavigator from './app/Navigation/AppNavigator.js'
 // });
 
 export default class App extends React.Component {
+  static navigationOptions = {
+    header: {
+      visible: false,
+    }
+  };
+
   render() {
     return (
       <AppNavigator/>
