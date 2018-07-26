@@ -11,6 +11,7 @@ import CameraScreen from '../components/Camera'
 const BottomBar = createBottomTabNavigator(
       {
         Home: HomeScreen,
+        Camera: CameraScreen,
         Test: TestScreen,
       },
       {
@@ -20,6 +21,8 @@ const BottomBar = createBottomTabNavigator(
             let iconName;
             if (routeName === 'Home') {
               iconName = `ios-home${focused ? '' : '-outline'}`;
+            } else if (routeName === 'Camera') {
+              iconName = `ios-camera${focused ? '' : '-outline'}`;
             } else if (routeName === 'Test') {
               iconName = `ios-contact${focused ? '' : '-outline'}`;
             }
@@ -48,7 +51,7 @@ const MainStack = createStackNavigator({
   },
   {
     initialRouteName: 'bottomBar',
-    headerMode: 'none',  
+    headerMode: 'none',
   }
 );
 

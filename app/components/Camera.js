@@ -3,10 +3,12 @@ import {
   View,
   Text,
   StyleSheet,
-  Dimensions
+  Dimensions,
+  Alert
 } from 'react-native';
 import { Button } from 'react-native-elements'
 import Camera from 'react-native-camera'
+import RNFetchBlob from 'react-native-fetch-blob'
 
 
 export default class CameraS extends React.Component {
@@ -15,6 +17,22 @@ export default class CameraS extends React.Component {
    this.camera.capture()
       .then((data) => console.log(data))
       .catch(err => console.error(err));
+
+    // Alert.alert(
+    //   'Image was taken',
+    //   [
+    //     {text: 'OK', onPress: () => console.log('OK')},
+    //   ],
+    // )
+
+    Alert.alert(
+      'Alert',
+      'Image was taken',
+      [
+        {text: 'OK', onPress: () => console.log('OK Pressed')},
+      ],
+      { cancelable: false }
+    )
   }
 
   render() {

@@ -40,7 +40,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>UIAppFonts</key>
@@ -68,6 +68,6 @@
 	<key>CFBundleDisplayName</key>
 	<string>Receipt</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 </dict>
 </plist>
